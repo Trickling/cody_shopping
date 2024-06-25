@@ -95,7 +95,6 @@ public class UserRegisterServiceImpl implements IUserRegisterService {
         request.requestCheck();
         Example example = new Example(Member.class);
         example.createCriteria().andEqualTo("state", 1).andEqualTo("username", request.getUserName());
-
         List<Member> users = memberMapper.selectByExample(example);
         if (users != null && users.size() > 0) {
             throw new ValidateException(SysRetCodeConstants.USERNAME_ALREADY_EXISTS.getCode(), SysRetCodeConstants.USERNAME_ALREADY_EXISTS.getMessage());

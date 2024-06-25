@@ -42,6 +42,7 @@ public abstract  class AbstractEmailSender implements EmailSender {
      * 发送HTML内容的邮件
      * @throws Exception
      */
+    @Override
     public void sendHtmlMail(MailData mailData)throws Exception{
         initProperties(mailData);
         //验证发送的数据

@@ -124,6 +124,13 @@
         <groupId>org.apache.dubbo</groupId>
         <artifactId>dubbo-spring-boot-starter</artifactId>
         <version>${dubbo-spring-boot.version}</version>
+        <!-- 2024-0616  增加排除依赖 -->
+        <exclusions>
+          <exclusion>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-autoconfigure</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.mybatis.spring.boot</groupId>
